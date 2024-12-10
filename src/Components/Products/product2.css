@@ -1,0 +1,107 @@
+* {
+  font-family: 'Arial', sans-serif; 
+  font-style: normal; 
+
+  margin: 0; 
+  padding: 0; 
+}
+
+.page {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background-color: #f9f9f9; /* Light background color */
+  padding: 50px 20px; /* Add spacing around the content */
+  min-height: 40vh; /* Full-height layout for the page */
+
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack the heading and content */
+  max-width: 1200px; /* Restrict container width */
+  width: 100%; /* Allow flexibility for responsiveness */
+  padding: 20px; /* Add padding for content spacing */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  border-radius: 8px; /* Round container corners */
+ color: white;
+  background-color: rgb(37, 35, 35);
+}
+.container:hover {
+  background-color: #fea286; 
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for hover */
+  color:black
+}
+.container h1 {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: -15px;
+  text-align: center;
+  text-decoration: underline;
+  
+  
+}
+
+.content {
+  display: flex;
+  flex-direction: row; /* Arrange image and text in a row */
+  justify-content: space-between; /* Space between image and text */
+  align-items: flex-start; /* Align items at the top */
+  gap: 30px; /* Spacing between image and text */
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+
+}
+
+.image {
+  width: 30%; /* Adjust image width */
+  max-width: 400px; /* Restrict maximum size */
+  height: 400px; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Rounded corners for the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.content p {
+  font-size: 14px;
+  line-height: 1.6; /* Improve readability */
+  text-align: justify; /* Justify text for neat alignment */
+  flex: 1; /* Allow the text area to grow flexibly */
+}
+
+.content h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px; /* Add space above the subheading */
+  text-align: left; /* Align subheading to the left */
+}
+
+.content ul {
+  list-style-type: disc; /* Use bullets for list items */
+  margin-top: 20px;
+  padding-left: 20px; /* Indent the list */
+}
+
+.content ul li {
+  margin-bottom: 10px; /* Add space between list items */
+  font-size: 14px;
+  line-height: 1.5; /* Enhance readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Stack image and text on smaller screens */
+    align-items: center; /* Center-align the content */
+  }
+
+  .image {
+    width: 80%; /* Reduce image size for smaller screens */
+  }
+
+  .content p,
+  .content ul {
+    text-align: center; /* Center text for better alignment */
+  }
+}

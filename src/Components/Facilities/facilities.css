@@ -1,0 +1,147 @@
+* {
+  font-family: 'Arial', sans-serif; 
+  font-style: normal; 
+
+  margin: 0; 
+  padding: 0; 
+}
+
+/* Facilities Container */
+.facilities-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 40px 20px;
+  background-color: rgb(59, 58, 58);
+}
+.facilities-container :hover {
+  background-color: #fea286; 
+}
+.facilities-container h1{
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: -15px;
+}
+
+/* Image Section */
+.facilities-images {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  margin-top: -50px;
+}
+
+.products-gallery {
+  display: flex;
+  justify-content: center; /* Align items horizontally at the center */
+  align-items: center; /* Align items vertically at the center */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+  gap: 20px; /* Space between items */
+}
+
+.product-card {
+  width: 250px; /* Set the width for each image */
+  text-align: center; /* Center the text below the images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to cards */
+  border-radius: 8px; /* Optional: Round corners */
+  padding: 15px;
+  background-color: #fff; /* Optional: Background color */
+  transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.product-card img {
+  width: 100%; /* Make image fill the container */
+  max-width: 920px;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; 
+}
+
+.product-card h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333; /* Text color */
+}
+
+
+.product-card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+.facility-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Information Section */
+.facilities-info {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  max-width: 800px;
+  margin: 0 auto; 
+  color: black;
+}
+
+.facilities-info:hover{
+  background-color: #fea286; 
+ 
+}
+.facilities-info p {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.facilities-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.facilities-info ul li {
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
+  color:black;
+}
+.facilities-info ul li::before {
+  content: "✔"; /* Checkmark bullet */
+  position: absolute;
+  left: 0;
+  color: black; /* Blue for emphasis */
+
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .images-grid {
+    flex-direction: column; /* Stack images vertically on small screens */
+    align-items: center;
+  }
+
+  .facility-image {
+    width: 80%; /* Reduce width for smaller devices */
+    height: auto;
+  }
+
+  .facilities-info {
+    padding: 20px;
+  }
+
+  .facilities-info p {
+    font-size: 1rem;
+  }
+
+  .facilities-info ul li {
+    font-size: 1rem;
+  }
+}

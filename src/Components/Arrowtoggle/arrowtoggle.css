@@ -1,0 +1,45 @@
+* {
+  font-family: 'Arial', sans-serif; 
+  font-style: normal; 
+
+  margin: 0; 
+  padding: 0; 
+}
+.arrow-container {
+  position: fixed;
+  top: 170px;
+  left: 20px;
+  background-color: #ff5722; 
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.arrow-container:hover {
+  transform: scale(1.1);
+}
+
+.arrow-icon {
+  font-size: 40px; /* Adjust arrow size */
+  font-weight: bolder; /* Increase the weight for a bolder look */
+  animation: bounce 1s infinite;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}

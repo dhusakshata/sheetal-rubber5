@@ -1,0 +1,525 @@
+* {
+  font-family: 'Arial', sans-serif; 
+  font-style: normal; 
+
+  margin: 0; 
+  padding: 0; 
+  }
+  .video-container {
+    width: 100%; 
+    height: 82vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #000; 
+    overflow: hidden; 
+  }
+  
+  .production-video {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+  }
+
+/* About Us Container Fix */
+.about-us-container {
+  display: flex;
+  flex-direction: column; 
+  margin: 0 auto; /* Center-align and reset margins */
+  padding: 20px; /* Add padding for better spacing */
+  background-color: rgb(37, 35, 35);
+  color: white;
+}
+
+/* About Us Title */
+.about-us-title {
+  margin: 20px 0; /* Add controlled spacing */
+  text-align: center;
+}
+
+.about-us-title h1 {
+  font-size: 2.5rem; /* Adjust for better spacing */
+  margin: 0 auto; /* Remove extra space */
+  font-weight: bold;
+}
+
+/* Reduce Gap Between Video and About Section */
+.about-us-content {
+  display: flex;
+  flex-wrap: wrap; /* Adjust for responsiveness */
+  gap: 10px; /* Reduce gap between info and video */
+  justify-content: space-around; /* Center items */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-us-content {
+    flex-direction: column; 
+    align-items: center;
+    gap: 15px; /* Add slight gap for clarity */
+  }
+}
+/* Define the animation */
+@keyframes slideInFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Slide down effect */
+    
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+
+.about-us-info,
+.about-us-video {
+  flex: 1; 
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgb(37, 35, 35); /* Match background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.about-us-info {
+  color: white; /* Text color */
+}
+
+.about-us-video-element {
+  width: 100%;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .about-us-content {
+    flex-direction: column; /* Stack items on smaller screens */
+  }
+
+  .about-us-title h1 {
+    font-size: 2.5rem; /* Reduce heading size */
+  }
+
+  
+}
+
+.read-more {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue background */
+  color: black; /* Black text color */
+  font-size: 1rem; /* Adjust text size */
+  font-weight: bold; /* Make text bold */
+  text-transform: uppercase; /* Transform text to uppercase */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.read-more:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  color: white; /* White text color on hover */
+}
+
+.read-more a {
+  text-decoration: none; /* Remove underline from link */
+  color: inherit; /* Inherit the button's text color */
+}
+
+.read-more a:hover {
+  text-decoration: none; /* Ensure no underline on hover */
+}
+.read-more-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue background */
+  color: black; /* Black text */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.read-more-link:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  color: white; /* White text on hover */
+}
+
+/* Products Section */
+.our-products {
+  margin: 20px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: whitesmoke;
+  color: black;
+  padding: 20px 0;
+}
+
+.our-products h1 {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: black;
+  margin-top:-20px
+}
+
+.products-gallerys {
+  margin-top: -20px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items within the container */
+  gap: 15px; /* Reduce the spacing between cards */
+
+}
+
+.product-cards {
+  flex: 1 1 calc(40% - 15px); /* 5 cards per row with spacing considered */
+  max-width: calc(20% - 15px); /* Limit max width to ensure smaller size */
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 5px; /* Add padding for better spacing inside the card */
+}
+
+.product-cards:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  border: 1px solid gray;
+}
+
+.product-cards img {
+  width: 100%;
+  height: 290px; /* Reduce height for smaller images */
+  border-radius: 6px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.product-cards h3 {
+  font-size: 14px; 
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1200px) {
+  .product-cards {
+    flex: 1 1 calc(25% - 15px); /* 4 cards per row */
+    max-width: calc(25% - 15px);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .product-cards {
+    flex: 1 1 calc(33.33% - 15px); /* 3 cards per row */
+    max-width: calc(33.33% - 15px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product-cards {
+    flex: 1 1 calc(50% - 15px); /* 2 cards per row */
+    max-width: calc(50% - 15px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .product-cards {
+    flex: 1 1 calc(100% - 15px); /* 1 card per row on very small screens */
+    max-width: calc(100% - 15px);
+  }
+}
+
+
+.logo-container {
+  margin-top: 20px;
+  border: 1px solid gray;
+  width: 100%;
+ 
+  text-align: center;
+  padding: 40px 0;
+  background-color: rgb(37, 35, 35);
+ 
+}
+
+.logo-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+  padding: 20px;
+}
+
+.swiper {
+  width: 100%; /* Set Swiper width to fit content */
+  margin: 0 auto; /* Center Swiper horizontally */
+  overflow: hidden; /* Prevent items from overflowing */
+}
+
+.swiper-slide {
+  display: flex; /* Flexbox for centering content */
+  justify-content: center;
+  align-items: center;
+}
+.logo-item {
+  width: 200px; /* Set a fixed width */
+  height: 150px; /* Set a fixed height */
+  display: block;
+  margin: 0 auto; /* Center the logo in the slide */
+  padding: 10px; /* Add spacing around logos */
+  box-sizing: border-box; /* Include padding in total size */
+  border-radius: 15px; /* Rounded corners for a smooth look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  object-fit: contain; /* Maintain the aspect ratio of logos */
+  border: 3px solid #ddd; /* Beautiful light border */
+  background-color: white; /* White background for logo items */
+}
+
+/* Hover Effect: Scale, Shadow, and Border Color Change */
+.logo-item:hover {
+  transform: scale(1.1); /* Slightly enlarge the image */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Soft shadow around the logo */
+  opacity: 0.8; /* Slightly fade the image */
+  border-color: #3498db; /* Change border color on hover (e.g., blue) */
+}
+
+/* Optional: Adjust navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #888; /* Lighter gray for better contrast */
+  font-size: 5px; /* Adjust button size */
+}
+
+/* Pagination dots for swiper */
+.swiper-pagination-bullet {
+  background-color: black;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: gray;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: gray; /* Highlight active dot */
+}
+
+/* Media Queries for responsiveness */
+
+/* For medium-sized screens (tablets) */
+@media (max-width: 1024px) {
+  .logo-item {
+    width: 100px; /* Smaller logos for tablets */
+    height: 100px;
+  }
+}
+
+/* For smaller screens (smartphones) */
+@media (max-width: 768px) {
+  .logo-item {
+    width: 80px; /* Even smaller logos for mobile screens */
+    height: 80px;
+  }
+}
+
+/* For extra small screens (very small devices) */
+@media (max-width: 480px) {
+  .logo-item {
+    width: 60px; /* Smallest logos for very small screens */
+    height: 60px;
+  }
+
+  .logo-container h1 {
+    font-size: 1.8rem; /* Adjust title size for smaller screens */
+  }
+}
+
+
+/* Application Area */
+.application-area {
+  margin: 20px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+  padding: 20px;
+  background-color:whitesmoke;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  
+}
+.application-head {
+  text-align: center; /* Center align the content */
+  padding: 20px 10px; /* Add padding for spacing */
+  color: black; /* White text color */
+  margin: 20px 0; /* Add margin to separate from other elements */
+ 
+}
+
+.application-head h1 {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: black;
+  margin-top: -50px;
+  
+}
+
+
+.button-container {
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+
+}
+
+.app-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 150px;
+  text-align: center;
+}
+
+.app-button:hover {
+  background-color:whitesmoke;
+  color: black;
+  transform: translateY(-5px);
+}
+
+.app-button.active {
+  background-color: #555; /* Highlight active button */
+}
+
+.image-display {
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -50px;
+}
+
+.image-display img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  animation: slideIn 1s ease-out;
+}
+
+/* Slide-in animation from left */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* Responsive Design for Products */
+@media screen and (max-width: 1200px) {
+  /* For larger tablets and desktops */
+  .products-gallerys {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three products per row */
+    gap: 20px;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /* For tablets */
+  .products-gallerys {
+    grid-template-columns: repeat(2, 1fr); /* Two products per row */
+    gap: 15px;
+  }
+
+  .product-cards {
+    padding: 10px;
+  }
+
+  .product-images {
+    width: 150px;
+    height: auto;
+  }
+
+  .product-cards h3 {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* For smaller tablets and large phones */
+  .products-gallerys {
+    grid-template-columns: repeat(2, 1fr); /* Still two products per row */
+    gap: 10px;
+  }
+
+  .product-cards {
+    padding: 8px;
+  }
+
+  .product-images {
+    width: 120px;
+    height: auto;
+  }
+
+  .product-cards h3 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* For small phones */
+  .products-gallerys {
+    grid-template-columns: 2fr; /* Single column layout */
+    gap: 2px;
+  }
+
+  .product-cards {
+    text-align: center; /* Center-align text for better layout */
+  }
+
+  .product-images {
+    width: 100px;
+    height: auto;
+  }
+
+  .product-cards h3 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  /* For very small screens */
+  .products-gallerys {
+    gap: 5px;
+  }
+
+  .product-images {
+    width: 90px;
+  }
+
+  .product-cards h3 {
+    font-size: 12px;
+  }
+}

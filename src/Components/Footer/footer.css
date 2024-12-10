@@ -1,0 +1,266 @@
+/* General Reset */
+* {
+  font-family: 'Arial', sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer Section Base */
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #000;
+  color: white;
+  padding: 40px;
+  gap: 30px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+/* Address Section */
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 25%;
+}
+
+.address-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.address-info h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.address-info p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Social Media Links */
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icon {
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Quick Links Section */
+.quick-links {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.quick-links h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.quick-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.quick-links a:hover {
+  color: #1e90ff;
+}
+
+/* Newsletter Section */
+.news-letter {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.news-letter p {
+  font-size: 16px;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.email-input {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.email-input:focus {
+  border-color: #ff5722;
+}
+
+.subscribe-button {
+  padding: 10px 20px;
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #e64a19;
+}
+
+/* Map Section */
+.map-container {
+  width: 25%;
+  height: 300px;
+  border: 2px solid white;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+/* Footer Bottom Text */
+.footer-bottom-text {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  padding-top: 20px;
+  border-top: 1px solid #fff;
+}
+
+/* Media Query for Small Screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .address,
+  .quick-links,
+  .news-letter,
+  .map-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .map-container {
+    height: 250px;
+  }
+
+  .footer-bottom-text {
+    font-size: 12px;
+  }
+}
+
+/* Media Query for Extra Small Screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .address,
+  .quick-links,
+  .news-letter,
+  .map-container {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  .map-container {
+    height: 200px;
+  }
+
+  .newsletter-form {
+    gap: 5px;
+  }
+
+  .email-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .subscribe-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .footer-bottom-text {
+    font-size: 12px;
+  }
+}
+
+/* Media Query for Ultra Small Screens (max-width: 320px) */
+@media screen and (max-width: 320px) {
+  .footer-section {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .address,
+  .quick-links,
+  .news-letter,
+  .map-container {
+    width: 100%;
+    margin: 5px 0;
+    display: block;
+  }
+
+  .map-container {
+    height: 150px;
+  }
+}
